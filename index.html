@@ -21,6 +21,7 @@
             <p>Por favor me deixe em paz!!</p>
         </div>
         <div id="messages"></div>
+        <div id="botrsp"></div>
     </div>
     <div class="envio col-md-12">
         <form id="form_envio">
@@ -34,9 +35,14 @@
         message= $('#msg').val();
         $( "#messages" ).append("<div id='usermsg'  alt='Avatar'>"+"<label>Você diz:</label>"+"<p>"+message+"</p>"+
             "</div>" );
+        $( "#botrsp" ).append("<div id='botmsg'>"+"<label>bot42 diz:</label>"+"<p>Você será o primeiro!</p>"+
+            "</div>" );
+        let button = document.querySelector("#btn");
+        button.disabled = true;
       event.preventDefault();
       });
     });
+    
 </script>
 </body>
 </html>
